@@ -463,13 +463,19 @@
       </section>
 
       <section id="projects">
-        <div class="file-header"><span class="fname">projects/</span><span class="badge">1 shipped · 3 templates</span></div>
+        <div class="file-header"><span class="fname">projects/</span><span class="badge">2 shipped · 2 templates</span></div>
         <div class="proj-grid">
           <a class="proj-card featured" href="#">
             <div class="fn">🐳 ansible-awx-cost-optimization <span class="pill">shipped</span></div>
             <h4>Replacing Licensed Ansible AWX with a Dockerized CI/CD Agent</h4>
             <p>AWX's licensing costs and scaling limits were slowing down deployments. Designed and built a custom Docker image (Ubuntu 24.10 + Ansible + required packages), published it to Docker Hub, then configured it as a self-hosted DevOps CI/CD agent with Ansible pre-installed — replacing AWX entirely for VM provisioning, software installs, and configuration updates, at zero licensing cost.</p>
             <div class="tags"><span class="tag">Docker</span><span class="tag">Ansible</span><span class="tag">CI/CD</span><span class="tag">Self-Hosted Agents</span><span class="tag">Cost Optimization</span></div>
+          </a>
+          <a class="proj-card featured" href="#">
+            <div class="fn">💰 azure-orphaned-resource-cleanup <span class="pill">shipped</span></div>
+            <h4>PowerShell-Driven Azure Cost Optimization</h4>
+            <p>Built PowerShell automation to continuously scan Azure subscriptions and flag orphaned resources — unattached managed disks, stale disk snapshots, unassociated public IPs and NICs, idle storage accounts, and oversized VM SKUs. Flagged resources were routed through an approval workflow before decommissioning, cutting recurring cloud spend without manual, subscription-by-subscription audits.</p>
+            <div class="tags"><span class="tag">PowerShell</span><span class="tag">Azure</span><span class="tag">Cost Optimization</span><span class="tag">Governance</span></div>
           </a>
           <a class="proj-card" href="#">
             <div class="fn">📦 ansible-config-management</div>
