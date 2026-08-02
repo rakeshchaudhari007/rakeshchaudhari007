@@ -131,6 +131,32 @@
 
   /* ---------- hero / terminal ---------- */
   .hero{max-width:760px; margin:8px 0 72px;}
+  .hero-top{display:flex; gap:22px; align-items:flex-start;}
+  .hero-top-text{flex:1; min-width:0;}
+  .avatar-card{
+    flex-shrink:0; width:120px; text-align:center;
+  }
+  .avatar-card .avatar-img{
+    width:120px; height:120px; border-radius:10px;
+    object-fit:cover; display:block;
+    border:2px solid var(--amber);
+    box-shadow:0 12px 30px -12px rgba(0,0,0,0.6);
+  }
+  .avatar-card .avatar-fallback{
+    display:none; width:120px; height:120px; border-radius:10px;
+    border:2px dashed var(--line-strong);
+    align-items:center; justify-content:center;
+    font-size:40px; background:var(--bg-panel); color:var(--text-dim);
+  }
+  .avatar-card.no-photo .avatar-img{display:none;}
+  .avatar-card.no-photo .avatar-fallback{display:flex;}
+  .avatar-card .avatar-cap{
+    font-family:var(--mono); font-size:10.5px; color:var(--text-dim);
+    margin-top:8px;
+  }
+  @media (max-width:560px){
+    .hero-top{flex-direction:column; align-items:center; text-align:center;}
+  }
   .terminal{
     background:var(--bg-panel);
     border:1px solid var(--line-strong);
@@ -293,7 +319,14 @@
     <main class="main">
 
       <section id="hero" class="hero">
-        <div class="terminal">
+        <div class="hero-top">
+          <div class="avatar-card">
+            <img class="avatar-img" src="profile.jpg" alt="Rakesh Chaudhari" onerror="this.parentElement.classList.add('no-photo')">
+            <div class="avatar-fallback">👤</div>
+            <div class="avatar-cap"># profile.jpg</div>
+          </div>
+          <div class="hero-top-text">
+            <div class="terminal">
           <div class="bar">
             <span class="dot r" style="background:#ef6a6a"></span>
             <span class="dot y" style="background:#ffb020"></span>
@@ -302,11 +335,13 @@
           </div>
           <div class="body" id="typedBody"></div>
         </div>
+          </div>
+        </div>
         <div class="hero-meta">
           <a href="mailto:rakeshchaudhari007@gmail.com">✉ rakeshchaudhari007@gmail.com</a>
           <a href="tel:+919923398957">☎ +91 99233 98957</a>
           <a href="https://www.linkedin.com/in/rakesh6560/" target="_blank" rel="noopener">🔗 linkedin.com/in/rakesh6560</a>
-          <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener">💻 github.com/YOUR_GITHUB_USERNAME</a>
+          <a href="https://github.com/rakeshchaudhari007" target="_blank" rel="noopener">💻 github.com/rakeshchaudhari007</a>
         </div>
       </section>
 
@@ -318,12 +353,14 @@
           <div class="line"><span class="ln">3</span><span><span class="key">location:</span> <span class="str">"Pune, Maharashtra, India"</span></span></div>
           <div class="line"><span class="ln">4</span><span><span class="key">experience:</span> <span class="str">"13+ years"</span></span></div>
           <div class="line"><span class="ln">5</span><span><span class="key">summary:</span> <span class="punc">|</span></span></div>
-          <div class="line"><span class="ln">6</span><span>&nbsp;&nbsp;Results-driven DevOps Engineer designing, automating, and</span></div>
-          <div class="line"><span class="ln">7</span><span>&nbsp;&nbsp;managing scalable cloud infrastructure and CI/CD pipelines</span></div>
-          <div class="line"><span class="ln">8</span><span>&nbsp;&nbsp;across Azure, AWS, and on-premises environments. Focused on</span></div>
-          <div class="line"><span class="ln">9</span><span>&nbsp;&nbsp;Infrastructure as Code, containerized deployments, and</span></div>
-          <div class="line"><span class="ln">10</span><span>&nbsp;&nbsp;automation scripting that improves reliability and speed.</span></div>
-          <div class="line"><span class="ln">11</span><span><span class="key">status:</span> <span class="str">"open to new opportunities"</span> <span class="cmt"># let's talk</span></span></div>
+          <div class="line"><span class="ln">6</span><span>&nbsp;&nbsp;Senior DevOps Engineer with 13+ years automating cloud</span></div>
+          <div class="line"><span class="ln">7</span><span>&nbsp;&nbsp;infrastructure and CI/CD pipelines across Azure, AWS, and</span></div>
+          <div class="line"><span class="ln">8</span><span>&nbsp;&nbsp;on-premises environments. Azure Solutions Architect Expert</span></div>
+          <div class="line"><span class="ln">9</span><span>&nbsp;&nbsp;certified, with a track record of replacing costly tooling</span></div>
+          <div class="line"><span class="ln">10</span><span>&nbsp;&nbsp;with custom-built automation — from Dockerized CI/CD agents</span></div>
+          <div class="line"><span class="ln">11</span><span>&nbsp;&nbsp;to Infrastructure-as-Code pipelines in Terraform and Ansible</span></div>
+          <div class="line"><span class="ln">12</span><span>&nbsp;&nbsp;— to cut costs and ship faster.</span></div>
+          <div class="line"><span class="ln">13</span><span><span class="key">status:</span> <span class="str">"open to new opportunities"</span> <span class="cmt"># let's talk</span></span></div>
         </div>
       </section>
 
